@@ -7,9 +7,14 @@ import SearchBar from "./search";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    maxHeight: 400,
-    height: 400,
+    maxHeight: 500,
+    height: 500,
     background: "white",
+    backgroundImage: `url(${"/img/another.jpg"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
   },
   menuTool: {
     minHeight: theme.spacing(10),
@@ -30,7 +35,7 @@ export default function Searchheader() {
           direction="column"
           alignItems="center"
           justify="center"
-          style={{ minHeight: "400px" }}
+          style={{ minHeight: "600px" }}
         >
           <SearchBar />
         </Grid>

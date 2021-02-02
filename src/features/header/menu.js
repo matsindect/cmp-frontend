@@ -8,7 +8,10 @@ export default function SimpleContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container>
-        <Navbar variant="light" style={{ padding: "0px" }}>
+        <Navbar
+          variant="light"
+          style={{ padding: "0px", marginBottom: "10px" }}
+        >
           <Nav className="mr-auto">
             <Nav.Link href="#home" style={{ paddingLeft: "0px" }}>
               Home

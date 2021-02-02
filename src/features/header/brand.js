@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     zIndex: 9,
-    marginTop: 200,
   },
   image: {
     width: 200,
