@@ -3,6 +3,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Image from "react-bootstrap/Image";
 import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Button } from "@material-ui/core";
+import { Row, Col } from "react-bootstrap";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 10,
     marginBottom: 10,
   },
+  accounts: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
 }));
 
 export default function SimpleContainer() {
@@ -25,7 +31,19 @@ export default function SimpleContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container>
-        <Image src="/img/cmp.png" className={classes.image} />
+        <Row>
+          <Col>
+            <Image src="/img/cmp.png" className={classes.image} />
+          </Col>
+          {/* <Col md="auto">Variable width content</Col> */}
+          <Col xs lg="3" className={classes.accounts}>
+            <Grid align-items-xs-center justify-xs-flex-end>
+              <Button>Contact us</Button>
+              <Button>Login</Button>
+              <Button>Register</Button>
+            </Grid>
+          </Col>
+        </Row>
       </Container>
     </React.Fragment>
   );

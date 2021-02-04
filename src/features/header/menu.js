@@ -16,14 +16,20 @@ export default function SimpleContainer() {
             <Nav.Link href="#home" style={{ paddingLeft: "0px" }}>
               Home
             </Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#features">Materials Supply</Nav.Link>
+            <Nav.Link href="#pricing">Plant & Equipment</Nav.Link>
+            <Nav.Link href="#home">Manpower Supply</Nav.Link>
+            <Nav.Link href="#features">Construction Courses</Nav.Link>
+            <Nav.Link href="#pricing">News & Events</Nav.Link>
+            <Nav.Link href="#home">Hardware Supplies</Nav.Link>
+            <Nav.Link href="#features">Project Cost Estimation</Nav.Link>
+            <Nav.Link href="#pricing">Temporary Facilites</Nav.Link>
+            <Nav.Link href="#pricing">Material Disposal</Nav.Link>
+            <Nav.Link href="#pricing">Contractors</Nav.Link>
+            <Nav.Link href="#pricing">Sub-Contractors</Nav.Link>
+            <Nav.Link href="#pricing">Suppliers</Nav.Link>
+            <Nav.Link href="#pricing">Consultants</Nav.Link>
+            <Nav.Link href="#pricing">Specialist Services</Nav.Link>
           </Nav>
         </Navbar>
       </Container>
