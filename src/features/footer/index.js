@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Row, Col } from "react-bootstrap";
-import Card from "./card";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,21 +25,10 @@ export default function HowIWorksindex() {
     <div>
       <Container fluid className={classes.root}>
         <Container>
-          <Row className="justify-content-md-center">
-            <div className={classes.sectionTitle}>
-              <h4>Suppliers</h4>
-            </div>
-          </Row>
-          <Row>
-            <Col>
-              <Card />
-            </Col>
-            <Col>
-              <Card />
-            </Col>
-            <Col>
-              <Card />
-            </Col>
+          <Row className={classes.sectionTitle}>
+            <Col>1 of 3</Col>
+            <Col>2 of 3</Col>
+            <Col>3 of 3</Col>
           </Row>
         </Container>
       </Container>
