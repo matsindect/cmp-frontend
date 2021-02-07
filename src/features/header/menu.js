@@ -13,6 +13,14 @@ export default function SimpleContainer() {
           style={{ padding: "0px", marginBottom: "10px" }}
         >
           <Nav className="mr-auto">
+            <div class="dropdown">
+              <button class="dropbtn">All Categories</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
             <Nav.Link href="#home" style={{ paddingLeft: "0px" }}>
               Home
             </Nav.Link>
