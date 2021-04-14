@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // with `path` and `component` props, ordered the same
 // way you'd do inside a `<Switch>`.
 
-export default function RouteConfig({ routes }) {
+export default function RenderRoutes({ routes }) {
   return (
     <Router>
       <Switch>

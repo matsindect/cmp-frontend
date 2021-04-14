@@ -64,7 +64,7 @@ export default function SimpleContainer() {
                       <ListGroup.Item action href="#link2" disabled>
                       Sub-Contractors
                       </ListGroup.Item>
-                      <ListGroup.Item action href="#link2" disabled>
+                      <ListGroup.Item action href="/suppliers">
                       Suppliers
                       </ListGroup.Item>
                       <ListGroup.Item action href="#link2" disabled>

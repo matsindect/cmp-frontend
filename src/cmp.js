@@ -1,15 +1,16 @@
 import React from "react";
 import Header from "./features/header/header";
-import Home from "./app/home";
 import Footer from "./features/footer";
+import RenderRoutes from "./router";
+import ROUTES from "./router/routes";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <RenderRoutes routes={ROUTES} />
       <Footer />
-    </div>
+    </div> 
   );
 }
 
