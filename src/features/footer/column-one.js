@@ -32,7 +32,9 @@ export default function ColumnOne() {
         <Col>
           <Image src="/img/cmp.png" className={classes.image} />
         </Col>
-        <Col>2 of 2</Col>
+        <Col>
+        
+        </Col>
       </Row>
     </Container>
   );

@@ -7,7 +7,12 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import DirectionsIcon from "@material-ui/icons/Directions";
-import { Container, Row, Col } from "react-bootstrap";
+import Select from '@material-ui/core/Select';
+import { Container, Row,Dropdown, ButtonGroup,DropdownButton,SplitButton, Col } from "react-bootstrap";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +23,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 20,
     marginRight: 20,
   },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 200,
+    background: "white"
+  },
+  // selectEmpty: {
+  //   marginTop: theme.spacing(2),
+  // },
   input: {
     marginLeft: theme.spacing(1),
     flex: 1,
@@ -33,18 +46,36 @@ const useStyles = makeStyles((theme) => ({
     height: 28,
     margin: 4,
   },
+  
 }));
 
 export default function CustomizedInputBase() {
   const classes = useStyles();
-
+  const [age, setAge] = React.useState('');
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
   return (
     <Container>
       <Row className="justify-content-md-center">
         <Paper component="form" className={classes.root}>
-          <IconButton className={classes.iconButton} aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+        <FormControl className={classes.formControl}>
+        <Select
+         
+          value={age}
+          onChange={handleChange}
+          displayEmpty
+          className={classes.selectEmpty}
+          inputProps={{ 'aria-label': 'Without label' }}
+        >
+          <MenuItem value="">
+            <em>General</em>
+          </MenuItem>
+          <MenuItem value={10}>Products</MenuItem>
+          <MenuItem value={20}>Service</MenuItem>
+          <MenuItem value={30}>Supplier</MenuItem>
+        </Select>
+      </FormControl>
           <Divider className={classes.divider} orientation="vertical" />
           <InputBase
             className={classes.input}

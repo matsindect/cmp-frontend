@@ -8,7 +8,6 @@ import { Container, Row } from "react-bootstrap";
 import Menu from "./menu";
 import Brand from "./brand";
 import SearchArea from "../search/header";
-import CauroselGroups from "../grouping";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,7 +64,7 @@ export default function ButtonAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <SearchArea className="m-auto" />
-      <CauroselGroups />
+      
     </div>
   );
 }

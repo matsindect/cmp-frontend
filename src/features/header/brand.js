@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   accounts: {
     marginTop: 10,
     marginBottom: 10,
+    justifyContent:"flex-end"
   },
 }));
 
@@ -30,13 +31,10 @@ export default function SimpleContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container>
-        <Row>
-          <Col>
-            <Image src="/img/cmp.png" className={classes.image} />
-          </Col>
+      <Container >
+        <Row className={classes.accounts}>
           {/* <Col md="auto">Variable width content</Col> */}
-          <Col xs lg="3" className={classes.accounts}>
+          <Col xs lg="3" >
             <Grid align-items-xs-center justify-xs-flex-end>
               <Button>Contact us</Button>
               <Button>Login</Button>

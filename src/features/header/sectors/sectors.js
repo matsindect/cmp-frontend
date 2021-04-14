@@ -103,6 +103,84 @@ const data = {
         "bedrooms": 4,
         "bathrooms": 1,
         "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 8,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 9,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 10,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 11,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 10,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
+    },
+    {
+        "_id": "593e9297afa51a013fcd07d5",
+        "index": 13,
+        "price": 696189,
+        "picture": "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property03.jpg",
+        "city": "Nicut",
+        "address": "416 Vandervoort Avenue",
+        "latitude": -33.943154,
+        "longitude": 151.24687,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "carSpaces": 1
     }
     ]
 }

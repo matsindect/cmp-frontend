@@ -10,17 +10,17 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   sectionTitle: {
     marginTop: 10,
-    marginLeft: 20,
+    marginLeft: 0,
   },
 }));
 // Because this is an inframe, so the SSR mode doesn't not do well here.
 // It will work on real devices.
-const Index = ({ deviceType }) => {
+const Index = ({ deviceType, heading }) => {
   const classes = useStyles();
   return (
-    <Container>
+    <Container className="mt-3">
       <Row className={classes.sectionTitle}>
-        <h4>Browse by Sectors</h4>
+        <h4>{heading}</h4>
       </Row>
       <Fragment>
         <Section>

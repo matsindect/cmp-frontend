@@ -1,37 +1,28 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Component, lazy, Suspense } from "react";
+import { BrowserRouter,Switch, Route, Redirect } from "react-router-dom";
+// import PrivateRoute from "./private-routes";
+import Spinner from "../features/spinner";
 
-// Some folks find value in a centralized route config.
-// A route config is just data. React is great at mapping
-// data into components, and <Route> is a component.
+const Home = lazy(() => import("../app/homePage"));
+const GeneralSearch = lazy(()=> import("../app/searchPages/general"));
+const productSearch = lazy(()=> import("../app/searchPages/products-search"));
 
-// Our route config is just an array of logical "routes"
-// with `path` and `component` props, ordered the same
-// way you'd do inside a `<Switch>`.
 
-export default function RouteConfig({ routes }) {
-  return (
-    <Router>
-      <Switch>
-        {routes.map((route, i) => (
-          <RouteWithSubRoutes key={i} {...route} />
-        ))}
-      </Switch>
-    </Router>
-  );
+class AppRoutes extends Component {
+  render() {
+    return (
+      <Suspense fallback={Spinner}>
+        <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} exact/>
+          <Route path="/search" component={GeneralSearch}  exact />
+          <Route path="/products" component={productSearch}  exact />
+          <Redirect to="/" />
+        </Switch>
+        </BrowserRouter>
+      </Suspense>
+    );
+  }
 }
 
-// A special wrapper for <Route> that knows how to
-// handle "sub"-routes by passing them in a `routes`
-// prop to the component it renders.
-function RouteWithSubRoutes(route) {
-  return (
-    <Route
-      path={route.path}
-      render={(props) => (
-        // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.routes} />
-      )}
-    />
-  );
-}
+export default AppRoutes

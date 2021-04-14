@@ -1,8 +1,14 @@
-import Home from "./../app/home";
+import Home from "./../app/homePage";
+import GeneralSearch from '../app/searchPages/general'
 
-export default routes = [
+ const routes = [
   {
     path: "/",
     component: Home,
   },
+  {
+    path: "/search",
+    component: GeneralSearch
+  },
 ];
+export default routes
