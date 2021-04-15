@@ -7,6 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -60,7 +61,7 @@ export default function CardGrid({product}) {
         <Grid item key={product.id} xs={12} sm={6} md={3}>
             <Card className={classes.card}>
                 <CardMedia>
-                <img src={product.img} style={Style} alt=""/>
+                  <Link to="/product"><img src={product.img} style={Style} alt=""/></Link>
                 </CardMedia>
                 <CardContent className={classes.cardContent}>
                 <Typography gutterBottom variant="h5" component="h2" className={`${classes.alignItemsAndJustifyContent} ${classes.cardTopText}`}>
