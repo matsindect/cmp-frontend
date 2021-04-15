@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     paddingBottom: theme.spacing(8),
-    maxWidth: '80%'
+    maxWidth: '85%'
   },
   offeringHeading: {
     paddingTop: '10px',

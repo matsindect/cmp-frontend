@@ -1,5 +1,6 @@
 import Home from "./../app/home";
 import Supplier from "./../app/suppliers";
+import Product from "./../app/suppliers/product";
 
 const Routes = [
   {
@@ -10,6 +11,10 @@ const Routes = [
   {
     path: "/suppliers",
     component: Supplier,
+  },
+  {
+    path: "/product",
+    component: Product,
   },
 ];
 
