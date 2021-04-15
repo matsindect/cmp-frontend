@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme) => ({
   main: {
     background: "white",
   },
-  cardGrid: {
+  container: {
     paddingBottom: theme.spacing(8),
-    maxWidth: '85%'
+    maxWidth: '80%'
   },
   offeringHeading: {
     paddingTop: '10px',
@@ -22,74 +22,69 @@ const useStyles = makeStyles((theme) => ({
 export default function Supplier() {
   const classes = useStyles();
 
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
-      img: "/img/background.jpg",
+      img: "./img/everyday-basics-I8eTuMmxIfo-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 2,
-      img: "/img/background.jpg",
+      img: "/img/everyday-basics-l8TylWKkjy4-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 3,
-      img: "/img/background.jpg",
+      img: "./img/everyday-basics-I8eTuMmxIfo-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 4,
-      img: "/img/background.jpg",
+      img: "/img/everyday-basics-l8TylWKkjy4-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 5,
-      img: "/img/background.jpg",
+      img: "./img/everyday-basics-I8eTuMmxIfo-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 6,
-      img: "/img/background.jpg",
+      img: "/img/everyday-basics-l8TylWKkjy4-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 7,
-      img: "/img/background.jpg",
+      img: "./img/everyday-basics-I8eTuMmxIfo-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
     {
       id: 8,
-      img: "/img/background.jpg",
+      img: "/img/everyday-basics-l8TylWKkjy4-unsplash.jpg",
       mainText: "Dolor set amet sdsd",
       subText: "Some text",
     },
-    {
-      id: 9,
-      img: "/img/background.jpg",
-      mainText: "Dolor set amet sdsd",
-      subText: "Some text",
-    },
-    {
-      id: 10,
-      img: "/img/background.jpg",
-      mainText: "Dolor set amet sdsd",
-      subText: "Some text",
-    },
-  ];
+  ]);
+
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
 
   return (
     <React.Fragment>
       <CssBaseline />
       <main className={classes.main}>
-        <Container>
+        <Container className={classes.container}>
           <div className={classes.offeringHeading}>
             <h3>Product Offering</h3>
           </div>
