@@ -64,7 +64,6 @@ export default function ButtonAppBar(props) {
         </AppBar>
       </ElevationScroll>
       <SearchArea className="m-auto" />
-      
     </div>
   );
 }

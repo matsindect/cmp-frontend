@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import { Row} from "react-bootstrap";
 import { CSSTransition } from 'react-transition-group';
+import NestedMenu from "./nested-menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   quickLinks: {
     width: "100%",
-    height:"300px",
+    height:"100%",
     backgroundColor:"white"
   },
   accounts: {
@@ -36,7 +37,8 @@ export default function SimpleContainer({sector}) {
 
       <Container className="mt-3">
         <Row className={classes.quickLinks}>
-            <img src={sector.picture} alt="" className="thumbnail"/>
+            {/* <img src={sector.picture} alt="" className="thumbnail"/> */}
+            <NestedMenu sector={sector} />
         </Row>
       </Container>
    </CSSTransition>
