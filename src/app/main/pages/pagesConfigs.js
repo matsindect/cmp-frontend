@@ -4,10 +4,10 @@ import HomePageConfig from './homePage/HomePageConfig';
 import SearchConfig from './searchPages/SearchConfig';
 
 const pagesConfigs = [
-	Error404PageConfig,
-	Error500PageConfig,
-	HomePageConfig,
-	SearchConfig,
+	...Error404PageConfig,
+	...Error500PageConfig,
+	...HomePageConfig,
+	...SearchConfig,
 ];
 
 export default pagesConfigs;

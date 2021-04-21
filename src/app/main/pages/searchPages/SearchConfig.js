@@ -1,16 +1,15 @@
-import React from 'react';
+import GeneralSearch from './general'
+import ProductSearch from './products-search'
 
-const SearchConfig = {
-	routes: [
-		{
-			path: '/search',
-			component: React.lazy(() => import('./general'))
-		},
-		{
-			path: '/products',
-			component: React.lazy(() => import('./products-search'))
-		}
-	]
-};
+const SearchConfig = [
+	{
+		path: '/search',
+		component: GeneralSearch,
+	},
+	{
+		path: '/products',
+		component: ProductSearch,
+	}
+]
 
 export default SearchConfig;

@@ -1,12 +1,10 @@
-import React from 'react';
+import index from '.';
 
-const HomePageConfig = {
-	routes: [
-		{
-			path: '/',
-			component: React.lazy(() => import('./index'))
-		}
-	]
-};
+const HomePageConfig = [
+	{
+		path: '/',
+		component: index,
+	}
+]
 
 export default HomePageConfig;

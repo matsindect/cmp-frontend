@@ -1,12 +1,16 @@
-import React from 'react';
+import Supplier from './supplier'
+import Product from './product'
 
-const SearchConfig = {
-	routes: [
-		{
-			path: '/suppliers',
-			component: React.lazy(() => import('./supplier'))
-		}
-	]
-};
+const SuppliersConfig = [
+    {
+        path: '/supplier',
+        component: Supplier,
+    },
+    {
+        path: '/product',
+        component: Product,
+    }
+]
 
-export default SearchConfig;
+
+export default SuppliersConfig;

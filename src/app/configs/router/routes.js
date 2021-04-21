@@ -1,29 +1,8 @@
-import Home from "../../main/pages/homePage";
-import GeneralSearch from '../../main/pages/searchPages/general'
-import ProductSearch from '../../main/pages/searchPages/products-search'
-import Supplier from '../../main/apps/suppliers/supplier'
-import Product from '../../main/apps/suppliers/product'
+import pagesConfigs from "../../main/pages/pagesConfigs";
+import appsConfigs from "../../main/apps/appsConfigs";
 
- const routes = [
-  {
-    path: "/",
-    component: Home,
-  },
-  {
-    path: "/search",
-    component: GeneralSearch
-  },
-  {
-    path: "/products",
-    component: ProductSearch
-  },
-  {
-    path: "/supplier",
-    component: Supplier
-  },
-  {
-    path: "/product",
-    component: Product
-  },
+const routes = [
+  ...pagesConfigs,
+  ...appsConfigs,
 ];
 export default routes
