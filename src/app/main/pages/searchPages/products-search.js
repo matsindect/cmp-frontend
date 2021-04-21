@@ -1,5 +1,5 @@
 import React from "react";
-import CauroselGroups from "../../features/grouping";
+import CauroselGroups from "../../../features/grouping";
 import CategoriesList from "./components/catergories"
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function GeneralSearch() {
+export default function ProductSearch() {
     const classes = useStyles();
   return (
     <div>

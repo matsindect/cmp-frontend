@@ -3,8 +3,8 @@ import React from "react";
 import { Fragment } from "react";
 import { Row } from "react-bootstrap";
 import { Container } from "semantic-ui-react";
-import CauroselGroups from "../../features/grouping";
-import Section from "../../features/grouping/components/Section";
+import CauroselGroups from "../../../features/grouping";
+import Section from "../../../features/grouping/components/Section";
 import ProductDetails from "./components/product-details";
 
 const useStyles = makeStyles((theme) => ({

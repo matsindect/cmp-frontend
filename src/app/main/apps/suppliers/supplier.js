@@ -1,5 +1,5 @@
 import React from "react";
-import CauroselGroups from "../../features/grouping";
+import CauroselGroups from "../../../features/grouping";
 import ProductList from "./components/product-list";
 
 export default function Supplier() {
