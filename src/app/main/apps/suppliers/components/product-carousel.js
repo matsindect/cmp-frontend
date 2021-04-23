@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
     img: {
         maxWidth: 'auto',
-        maxHeight: '200px',
+        maxHeight: '300px',
     },
   }));
 
@@ -33,7 +33,14 @@ export default function ProductCarousel(props)
     ]
 
     return (
-        <Carousel>
+        <Carousel 
+            autoPlay={false}
+            //animation={this.state.animation}
+            // indicators={this.state.indicators}
+            // timeout={2000}
+            navButtonsAlwaysVisible={false}
+            // navButtonsAlwaysInvisible={this.state.navButtonsAlwaysInvisible}
+        >
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
