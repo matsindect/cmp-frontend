@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       background: 'white',
   },
   sectionTitle: {
-    marginTop: 10,
+    paddingTop: 10,
     marginLeft: 0,
   },
   container: {
@@ -26,7 +26,7 @@ export default function Product() {
 
   return (
     <>
-      <CauroselGroups heading={"Browse by Sectors"}/>
+      <CauroselGroups heading={"Browse by Categories"}/>
       <div className={classes.main}>
         <Container className={classes.container}>
           <Row className={classes.sectionTitle}>

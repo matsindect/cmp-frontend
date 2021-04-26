@@ -9,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
         borderColor: props => props.color,
         color: props => props.color,
         borderRadius: '20px',
+        opacity: '0.9',
         '&:hover': {
             borderColor: props => props.color,
-            opacity: '0.7'
+            background: props => props.color,
+            color: 'white',
+            opacity: '1',
         }
     },
 }));

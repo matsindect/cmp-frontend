@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function ProductCard({card }) {
+export default function ProductCard({card}) {
   const classes = useStyles();
 
   return (
@@ -43,7 +43,7 @@ export default function ProductCard({card }) {
         <Card className={classes.card}>
             <CardMedia className={classes.cardMedia}>
                 <Link to="/product">
-                    <img className={classes.cardImage} src="/img/product2.jpg" alt="title"/>
+                    <img className={classes.cardImage} src="/img/Fire-Angel_CO-9X-10-FF_Images_Image01.png" alt="title"/>
                 </Link>
             </CardMedia>
             <CardContent className={classes.cardContent}>
@@ -57,7 +57,7 @@ export default function ProductCard({card }) {
                     </Typography>
             </CardContent>
             <CardActions style={{justifyContent: 'center'}}>
-                <CustomButton text="Secondary" variant="outlined" color="primary" />
+                <CustomButton text="Secondary" variant="outlined" color="#3f51b5" />
                 <CustomButton text="Primary" variant="outlined" color="green" />
             </CardActions>
         </Card>

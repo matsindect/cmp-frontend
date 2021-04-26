@@ -8,22 +8,22 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { Box, Typography } from '@material-ui/core';
+import BootstrapTooltip from './BootstrapTooltip';
 
 const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 400,
   },
   tableHead: {
-    background: theme.palette.primary.main,
-    opacity: '0.8'
+    background: '#d1ecf1',
   },
   heading: {
-    
+    color: '#3f51b5',
   },
   cell: {
     paddingTop: '8px',
     paddingBottom: '8px',
-    borderColor: theme.palette.primary.main,
+    borderColor: '#bee5eb',
     border: '1px',
     borderStyle: 'solid',
     borderCollapse: 'collapse',
@@ -52,7 +52,7 @@ export default function SpanningTable({attr, heading}) {
                 <TableRow key={row.desc}>
                 <TableCell style={{ width: '35%' }} className={classes.cell}>
                     <Typography variant="body2" gutterBottom>
-                        <Box fontSize='14px'>
+                        <Box fontSize='14px' style={{ color:'#9fa5aa' }}>
                             {row.col1}
                         </Box>
                     </Typography>
@@ -60,7 +60,9 @@ export default function SpanningTable({attr, heading}) {
                 <TableCell className={classes.cell} align="left">
                     <Typography variant="body2" gutterBottom>
                         <Box fontSize='14px' fontWeight='bold'>
-                            {row.col2}
+                          <BootstrapTooltip title="Click to search for other products which match this criteria" placement="top">
+                            <a href="#" style={{color:'#0e1e2a', textDecorationLine: 'underline', textDecorationStyle: 'dotted' }}>{row.col2}</a>
+                          </BootstrapTooltip>
                         </Box>
                     </Typography>
                 </TableCell>

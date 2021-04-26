@@ -39,8 +39,8 @@ export default function TransitionAlerts() {
         <Typography variant="body2" paragraph>
             <Box fontSize='16px'>
               Please note that these product properties are not a replacement for 
-              the manufacturer's literature and it is always recommended that Fire 
-              Angel is consulted before specifying. 
+              the manufacturer's literature and it is always recommended that <strong>Fire 
+              Angel</strong> is consulted before specifying. 
             </Box>
         </Typography>
         </Alert>

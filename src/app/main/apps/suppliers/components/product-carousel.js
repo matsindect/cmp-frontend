@@ -23,12 +23,12 @@ export default function ProductCarousel(props)
         {
             name: "Random Name #1",
             description: "Probably the most random thing you have ever seen!",
-            img: "/img/product1.jpg",
+            img: "/img/Fire-Angel_CO-9X-10-FF_Images_Image01.png",
         },
         {
             name: "Random Name #2",
             description: "Hello World!",
-            img: "/img/product2.jpg",
+            img: "/img/Fire-Angel_CO-9X-10-FF_Images_Image02.png",
         }
     ]
 

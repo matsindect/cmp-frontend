@@ -28,7 +28,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8];
+const products = [
+    1, 2, 3, 4, 5, 6, 7, 8
+];
 
 export default function ProductList() {
   const classes = useStyles();
@@ -41,8 +43,8 @@ export default function ProductList() {
                     Product Offering
                 </Typography>
                 <Grid container spacing={3}>
-                {cards.map((card) => (
-                    <ProductCard card={card} />
+                {products.map((product) => (
+                    <ProductCard product={product} />
                 ))}
                 </Grid>
             </Row>

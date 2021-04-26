@@ -258,6 +258,8 @@ export default function ProductDetails() {
           <Box boxShadow={3} borderRadius={5} style={{marginLeft: '5px', marginRight: '-2px'}} className={classes.paper}>
             <Box textAlign="center" style={{margin: '0 10px'}} fontSize="16px">
               <div className={classes.btnContainer}>
+              
+                <img style={{paddingTop: '20px'}} src="/img/fire-angel-logo.png" alt="logo" />
                 <Typography variant="p" gutterBottom color="primary">
                   Fire Angel
                 </Typography>
@@ -281,11 +283,11 @@ export default function ProductDetails() {
                   <CustomButton text='Lorem' color="green" variant='outlined' />
                 </span>
                 <span>
-                  <CustomButton text='Set' variant='outlined' />
+                  <CustomButton text='Set' color="#414141" variant='outlined' />
                 </span>
               </div>
               <div className={classes.btnContainer}>
-                <CustomButton text='Lorem ipsum dolor' color="primary" variant='outlined' />
+                <CustomButton text='Lorem ipsum dolor' color="#3f51b5" variant='outlined' />
               </div>
               <div className={classes.btnContainer}>
                 <Divider />
