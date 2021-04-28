@@ -8,54 +8,75 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import formValidation from './formValidation';
-import FirstStep from './first-step';
-import SecondStep from './second-step';
 import Confirm from './confirm';
+import CompanyInfo from './company-info';
+import ImagesAndFiles from './images-files';
+import Products from './products';
+import Location from './location';
+import ContactPersons from './contact-persons';
+import Social from './social';
 import Success from './success';
 
-// Step titles
-const labels = ["First Step", "Second Step", "Confirmation"];
-
 const initialValues = {
-  firstName: "",
-  lastName: "",
+  name: "",
+  about: "",
   email: "",
-  gender: "",
-  date: "",
-  city: "",
-  phone: ""
+  website: "",
+  tel: "",
+  logo: "",
+  license: "",
+  images: "",
+  products_catalogue: "",
+  categories: "",
+  businesstype: "",
+  sectors: "",
+  products: "",
+  coordinates: "", 
+  CountQueuingStrategy: "", 
+  state: "", 
+  area: "", 
+  address: "", 
+  country: "",
+  cellphone: '', 
+  designation: ''
 };
 
 const fieldsValidation = {
-  firstName: {
+  name: {
     error: "",
     validate: "text",
     minLength: 2,
     maxLength: 20
   },
-  lastName: {
+  about: {
     error: "",
     validate: "text",
     minLength: 2,
     maxLength: 20
   },
+  tel: {},
   email: {
     error: "",
     validate: "email"
   },
+  website: {},
   gender: {},
-  date: {},
-  city: {
-    error: "",
-    validate: "text",
-    minLength: 3,
-    maxLength: 20
-  },
-  phone: {
-    error: "",
-    validate: "phone",
-    maxLength: 15
-  }
+  logo: {},
+  license: {},
+  images: {},
+  products_catalogue: {},
+  categories: {},
+  businesstype: {},
+  sectors: {},
+  products: {},
+  coordinates: {}, 
+  CountQueuingStrategy: {}, 
+  state: {}, 
+  area: {}, 
+  address: {}, 
+  country: {},
+  cellphone: {}, 
+  designation: {},
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -74,35 +95,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// function getSteps() {
-//   return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
-// }
-
-// function getStepContent(step) {
-//   switch (step) {
-//     case 0:
-//       return `For each ad campaign that you create, you can control how much
-//               you're willing to spend on clicks and conversions, which networks
-//               and geographical locations you want your ads to show on, and more.`;
-//     case 1:
-//       return 'An ad group contains one or more ads which target a shared set of keywords.';
-//     case 2:
-//       return `Try out different ad text to see what brings in the most customers,
-//               and learn how to enhance your ads using features like ad extensions.
-//               If you run into any problems with your ads, find out how to tell if
-//               they're running and how to resolve approval issues.`;
-//     default:
-//       return 'Unknown step';
-//   }
-// }
-
 const VerticalLinearStepper = () => {
 
   const getStepContent = (step) => {
     switch (step) {
       case 0:
         return (
-          <FirstStep
+          <CompanyInfo
             handleNext={handleNext}
             handleChange={handleChange}
             values={formValues}
@@ -111,7 +110,7 @@ const VerticalLinearStepper = () => {
         );
       case 1:
         return (
-          <SecondStep
+          <ImagesAndFiles
             handleNext={handleNext}
             handleBack={handleBack}
             handleChange={handleChange}
@@ -121,19 +120,44 @@ const VerticalLinearStepper = () => {
         );
       case 2:
         return (
-          <Confirm
+          <Products
             handleNext={handleNext}
             handleBack={handleBack}
             values={formValues}
           />
         );
+      case 3:
+        return (
+          <Location
+            handleNext={handleNext}
+            handleBack={handleBack}
+            values={formValues}
+          />
+        );
+      case 4:
+        return (
+          <ContactPersons
+            handleNext={handleNext}
+            handleBack={handleBack}
+            values={formValues}
+          />
+        );
+      case 5:
+        return (
+          <Social
+            handleNext={handleNext}
+            handleBack={handleBack}
+            values={formValues}
+          />
+        );
+      case 6:
       default:
         return 'Unknown step';
     }
   };
 
   const getSteps = () => {
-    return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+    return ['Company Info', 'Images and Files', 'Products', 'Location', 'Contact Persons', 'Social'];
   };
 
   const classes = useStyles();
@@ -174,33 +198,21 @@ const VerticalLinearStepper = () => {
   };
 
   return (
-    <>
-      {activeStep === labels.length ? (
-        // Last Component
-        <Success values={formValues} />
-      ) : (
-        <div className={classes.root}>
-          <Stepper activeStep={activeStep} orientation="vertical">
-            {steps.map((label, index) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-                <StepContent>
-                  <Typography>{getStepContent(index)}</Typography>
-                </StepContent>
-              </Step>
-            ))}
-          </Stepper>
-          {activeStep === steps.length && (
-            <Paper square elevation={0} className={classes.resetContainer}>
-              <Typography>All steps completed - you&apos;re finished</Typography>
-              <Button onClick={handleReset} className={classes.button}>
-                Reset
-              </Button>
-            </Paper>
-          )}
-        </div>
+    <div className={classes.root}>
+      <Stepper activeStep={activeStep} orientation="vertical">
+        {steps.map((label, index) => (
+          <Step key={label}>
+            <StepLabel>{label}</StepLabel>
+            <StepContent>
+              <Typography>{getStepContent(index)}</Typography>
+            </StepContent>
+          </Step>
+        ))}
+      </Stepper>
+      {activeStep === steps.length && (
+        <Success />
       )}
-    </>
+    </div>
   );
 }
 
