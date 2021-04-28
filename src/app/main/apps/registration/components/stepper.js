@@ -4,11 +4,8 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import formValidation from './formValidation';
-import Confirm from './confirm';
 import CompanyInfo from './company-info';
 import ImagesAndFiles from './images-files';
 import Products from './products';
@@ -16,6 +13,8 @@ import Location from './location';
 import ContactPersons from './contact-persons';
 import Social from './social';
 import Success from './success';
+import { Grid } from 'semantic-ui-react';
+import { Box } from '@material-ui/core';
 
 const initialValues = {
   name: "",
