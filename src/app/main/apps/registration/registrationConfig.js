@@ -1,4 +1,4 @@
-import index from "./supplier/SupplierForm";
+import index from "./SupplierForm";
 
 const RegistrationConfig = [
     {
