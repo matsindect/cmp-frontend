@@ -1,8 +1,8 @@
-import index from ".";
+import index from "./supplier/SupplierForm";
 
 const RegistrationConfig = [
     {
-        path: '/register',
+        path: '/register_supplier',
         component: index,
     },
 ]
