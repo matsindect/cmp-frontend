@@ -13,7 +13,6 @@ import Location from './location';
 import ContactPersons from './contact-persons';
 import Social from './social';
 import Success from './success';
-import { Grid } from 'semantic-ui-react';
 import { Box } from '@material-ui/core';
 
 const initialValues = {
@@ -81,6 +80,7 @@ const fieldsValidation = {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    background: '#fff'
   },
   button: {
     marginTop: theme.spacing(1),
@@ -92,6 +92,10 @@ const useStyles = makeStyles((theme) => ({
   resetContainer: {
     padding: theme.spacing(3),
   },
+  heading: {
+    paddingTop: '10px',
+    marginBottom: '-50px',
+  }
 }));
 
 const VerticalLinearStepper = () => {
@@ -174,10 +178,6 @@ const VerticalLinearStepper = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
   // Handle form change
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -198,6 +198,9 @@ const VerticalLinearStepper = () => {
 
   return (
     <div className={classes.root}>
+      <Box textAlign='center' className={classes.heading}>
+        <Typography variant='h6' color='secondary'>REGISTRATION</Typography>
+      </Box>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>

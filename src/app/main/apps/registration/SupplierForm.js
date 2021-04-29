@@ -10,7 +10,7 @@ export default function SupplierForm() {
       <Row>
         <Container style={{background: "white", paddingRight: "0px", paddingLeft: "30px"}}>
           <Container style={{background: "#f5f5f5", width: "100%"}}>
-            <Container style={{width: "100%", paddingTop: "30px", paddingBottom: "30px"}}>
+            <Container style={{width: "100%", paddingTop: "40px", paddingBottom: "30px"}}>
                 <VerticalLinearStepper />
             </Container>
           </Container>

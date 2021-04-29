@@ -19,9 +19,9 @@ const Success = () => {
       <Typography variant="h2" align="center">
         Thank you!
       </Typography>
-      <Typography component="p" align="center" className={classes.title}>
+      {/* <Typography component="p" align="center" className={classes.title}>
         You will get an email with further instructions
-      </Typography>
+      </Typography> */}
     </Box>
   );
 };
