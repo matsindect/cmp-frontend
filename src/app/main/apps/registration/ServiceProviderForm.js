@@ -16,7 +16,6 @@ export default function ServiceProviderForm() {
           </Container>
         </Container>
       </Row>
-      
     </div>
   );
 }

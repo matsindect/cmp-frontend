@@ -8,6 +8,7 @@ import CustomButton from './button';
 import clsx from 'clsx';
 import SpanningTable from './table';
 import TransitionAlerts from './close-open-action';
+import { Bookmark, Call, CompareOutlined, FlashOnOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -264,47 +265,42 @@ export default function ProductDetails() {
                   Fire Angel
                 </Typography>
                 <Typography variant="body1" gutterBottom>
-                  <StarBorderSharpIcon></StarBorderSharpIcon>
-                  <StarBorderSharpIcon></StarBorderSharpIcon>
-                  <StarBorderSharpIcon></StarBorderSharpIcon>
-                  <StarBorderSharpIcon></StarBorderSharpIcon>
-                  <StarBorderSharpIcon></StarBorderSharpIcon>
+                  <StarBorderSharpIcon style={{color: 'orange'}}></StarBorderSharpIcon>
+                  <StarBorderSharpIcon style={{color: 'orange'}}></StarBorderSharpIcon>
+                  <StarBorderSharpIcon style={{color: 'orange'}}></StarBorderSharpIcon>
+                  <StarBorderSharpIcon style={{color: 'orange'}}></StarBorderSharpIcon>
+                  <StarBorderSharpIcon style={{color: 'orange'}}></StarBorderSharpIcon>
                 </Typography>
                 <Divider className={classes.divider}/>
               </div>
-              <div className={classes.btnContainer}>
-                <CustomButton text='Lorem ipsum dolor' color="primary" variant='contained' />
-              </div>
-              <div className={classes.btnContainer}>
-                <CustomButton text='Lorem ipsum dolor' color="orange" variant='outlined' />
-              </div>
-              <div className={classes.btnContainer}>
-                <span style={{paddingRight: '10px'}}>
-                  <CustomButton text='Lorem' color="green" variant='outlined' />
+              <Box className={classes.btnContainer}>
+                <CustomButton text='Download pack' color="primary" variant='contained' width='100%' />
+              </Box>
+              <Box className={classes.btnContainer}>
+                <CustomButton text='Request call' color="orange" variant='outlined' width='100%' startIcon={<Call />} />
+              </Box>
+              <Box className={classes.btnContainer}>
+                <span style={{paddingRight: '5px'}}>
+                  <CustomButton text='Lorem' color="green" width='50%' variant='outlined' />
                 </span>
                 <span>
-                  <CustomButton text='Set' color="#414141" variant='outlined' />
+                  <CustomButton text='Note' color="#414141" variant='outlined' width='25%' />
                 </span>
-              </div>
-              <div className={classes.btnContainer}>
-                <CustomButton text='Lorem ipsum dolor' color="#3f51b5" variant='outlined' />
-              </div>
-              <div className={classes.btnContainer}>
+              </Box>
+              <Box className={classes.btnContainer}>
+                <CustomButton text='Compare' color="#3f51b5" variant='outlined' width='100%' startIcon={<CompareOutlined />} />
+              </Box>
+              <Box className={classes.btnContainer}>
                 <Divider />
-              </div>
-              <Typography variant="h5" gutterBottom>
-                <Box fontWeight="fontWeightBold">
-                  Dolo sit amet
-                </Box>
-              </Typography>
-              <div className={classes.btnContainer}>
-                <CustomButton text='Lorem ipsum dolor' color="green" variant='outlined' />
-              </div>
-              <div className={classes.btnContainer} style={{paddingBottom: '20px'}}>
+              </Box>
+              <Box className={classes.btnContainer}>
+                <CustomButton text='Instant price' color="green" variant='outlined' width='100%' startIcon={<FlashOnOutlined />} />
+              </Box>
+              <Box className={classes.btnContainer} style={{paddingBottom: '20px', fontSize: '12px'}}>
                 <Typography variant="p" gutterBottom color='primary'>
-                    Dolo sit amet
+                    Or, Ask a Question
                 </Typography>
-              </div>
+              </Box>
             </Box>
           </Box>
         </Grid>
