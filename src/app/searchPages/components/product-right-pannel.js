@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Col } from "react-bootstrap";
 import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '../components/breadcrumbs'
-import Listing from "../components/listing"
+import Breadcrumbs from './breadcrumbs'
+import Listing from "./product-listing"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function LeftPannel() {
+export default function LeftPannel({business, productCategory, sector}) {
     const classes = useStyles();
     
     return (
             <Col sm={9}>
-              <Breadcrumbs />
-              <Listing />
+              <Breadcrumbs business={business} productCategory={productCategory} sector={sector} />
+              <Listing business={business} productCategory={productCategory} sector={sector} />
             </Col>
     )
 }

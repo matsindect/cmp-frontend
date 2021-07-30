@@ -1,7 +1,7 @@
 import React from "react";
 import { Container,Row} from "react-bootstrap";
 import LeftPanel from '../components/left-pannel'
-import RightPanel from "../components/right-pannel"
+import RightPanel from "./service-right-pannel"
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function Wrapper() {
+export default function Wrapper({business, productCategory, sector}) {
   const classes = useStyles(); 
   return (
      <Container className="mt-5" >
         <Row >
-            <LeftPanel />
-            <RightPanel/>
+            <LeftPanel productCategory={productCategory} />
+            <RightPanel business={business} productCategory={productCategory} sector={sector}/>
         </Row>
     </Container>
   );

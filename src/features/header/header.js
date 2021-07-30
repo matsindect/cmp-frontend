@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -8,6 +8,12 @@ import { Container, Row } from "react-bootstrap";
 import Menu from "./menu";
 import Brand from "./brand";
 import SearchArea from "../search/header";
+import { useDispatch } from "react-redux";
+import { fetchAllSectors } from '../../store/sectors/sectorsAction';
+import { fetchAllBusinesss } from '../../store/business/businessAction';
+import { fetchAllCategories } from '../../store/categories/categoriesAction';
+import { fetchAllProductCategories } from '../../store/product-categories/productCategoriesAction';
+import { fetchAllServiceCategories } from '../../store/service-categories/serviceCategoriesAction';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,6 +52,15 @@ ElevationScroll.propTypes = {
 };
 export default function ButtonAppBar(props) {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllSectors());
+    dispatch(fetchAllBusinesss());
+    dispatch(fetchAllCategories());
+    dispatch(fetchAllProductCategories());
+    dispatch(fetchAllServiceCategories());
+	}, [dispatch]);
 
   return (
     <div className={classes.root}>

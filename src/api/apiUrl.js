@@ -1,0 +1,1 @@
+export const apiUrl = 'https://api.constructmeplace.com/api/v1'

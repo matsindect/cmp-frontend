@@ -26,7 +26,7 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
-export default function CustomizedBreadcrumbs() {
+export default function CustomizedBreadcrumbs({business, productCategory, sector}) {
   return (
     <Breadcrumbs aria-label="breadcrumb">
       <StyledBreadcrumb
@@ -35,9 +35,10 @@ export default function CustomizedBreadcrumbs() {
         label="Home"
         onClick={handleClick}
       />
-      <StyledBreadcrumb component="a" href="#" label="Catalog" onClick={handleClick} />
+      <StyledBreadcrumb component="a" href="#" label={business ? business.name : "Business"} onClick={handleClick} />
+      <StyledBreadcrumb component="a" href="#" label={sector ? sector.name : "Sector"} onClick={handleClick} />
       <StyledBreadcrumb
-        label="Accessories"
+        label="Products"
         deleteIcon={<ExpandMoreIcon />}
         onClick={handleClick}
         onDelete={handleClick}
