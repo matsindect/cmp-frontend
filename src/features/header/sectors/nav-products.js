@@ -7,7 +7,6 @@ import { CSSTransition } from 'react-transition-group';
 import { Grid, Typography } from "@material-ui/core";
 import TabItemProducts from "../products/TabItemProducts";
 import { Pagination } from '@material-ui/lab';
-import TabItemServices from "../services/TabItemServices";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +50,7 @@ export default function SimpleContainer({ business, sectors }) {
     } else {
       setEndNumberOfPages(0)
     }
-  }, [page, value, numberOfPages])
+  }, [page, value, numberOfPages, business, sectors])
 
   return (
     <CSSTransition

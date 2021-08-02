@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -14,12 +15,15 @@ code {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 #__next {
   padding: 20px;
 }
+
 .image-item {
   padding: 20px 0 20px 20px;
 }
+
 /* Dropdown Button */
 .dropbtn {
   background-color: #ffffff;
@@ -67,6 +71,7 @@ code {
 .dropdownmenu:hover .dropbtn {
   background-color: #ffffff;
 }
+
 /* The side navigation menu */
 .sidebar {
   margin: 0;
@@ -105,6 +110,29 @@ div.content {
   min-height: 400px;
 }
 
+/* Carousel */
+.SecondExample {
+  width: 100%;
+}
+
+.SecondExample .Project {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.SecondExample .Project * {
+  color: white;
+}
+
+.SecondExample .Project .CheckButton {
+  margin-top: 40px;
+  color: white;
+  border: 3px solid white;
+  text-transform: capitalize;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
@@ -112,8 +140,14 @@ div.content {
     height: auto;
     position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -123,4 +157,3 @@ div.content {
     float: none;
   }
 }
-

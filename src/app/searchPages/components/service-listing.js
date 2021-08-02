@@ -1,9 +1,8 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import BookmarksIcon from '@material-ui/icons/Bookmarks';
@@ -60,8 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MediaControlCard({ business, productCategory, sector }) {
   const classes = useStyles();
-  const theme = useTheme();
-  const { services, isLoading, error } = useSelector(state => state.services);
+  const { services } = useSelector(state => state.services);
 
   if (!business) {
     return <h2>...</h2>

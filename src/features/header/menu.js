@@ -1,7 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
-import { Navbar, Nav, Row, Col, ListGroup } from "react-bootstrap";
+import { Navbar, Nav, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { makeStyles } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
@@ -21,8 +21,8 @@ export default function SimpleContainer() {
   const classes = useStyles();
   const { categories, isLoading, error } = useSelector(state => state.categories);
 
-  // if (isLoading) return <h3>Loading ...</h3>;
-	// if (error) return <h3>{error}</h3>;
+  if (isLoading) return <h3>Loading ...</h3>;
+	if (error) return <h3>{error}</h3>;
   
   return (
     <React.Fragment>

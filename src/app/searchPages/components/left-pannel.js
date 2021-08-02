@@ -6,7 +6,6 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
 import { useSelector } from 'react-redux';
 
@@ -22,10 +21,7 @@ const useStyles = makeStyles((theme) => ({
 export default function LeftPannel({ productCategory }) {
 
   const classes = useStyles();
-  const { productCategories, isLoading, error } = useSelector(state => state.productCategories);
-
-  const [state, setState] = React.useState();
-
+  const { productCategories } = useSelector(state => state.productCategories);
 
   const handleChange = (event) => {
     // setState({ ...state, [event.target.name]: event.target.checked });

@@ -4,7 +4,7 @@ import UAParser from "ua-parser-js";
 import React, { Fragment } from "react";
 import Simple from "./components/Simple";
 import Section from "./components/Section";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({

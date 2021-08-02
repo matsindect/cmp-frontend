@@ -35,7 +35,7 @@ export const MenuElement = ({ filtered, serviceCategories, item, bt }) => {
                 && sc1.parent.length > 0
                 && sc1.parent[0].name === filtered.name
             )))
-    }, [])
+    }, [filtered, item, serviceCategories])
 
     return (
         <ListItem key={filtered.name}>

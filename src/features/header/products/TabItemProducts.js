@@ -19,12 +19,11 @@ const useStyles = makeStyles((theme) => ({
 
 const TabItemProducts = ({ item, bt }) => {
     const classes = useStyles();
-    const [dense, setDense] = useState(false);
     const [endIndex, setEndIndex] = useState(3)
 
     const { productCategories, isLoading, error } = useSelector(state => state.productCategories);
 
-    if (isLoading) return <h3></h3>;
+    if (isLoading) return;
     if (error) return <h3>{error}</h3>;
 
 
@@ -36,7 +35,7 @@ const TabItemProducts = ({ item, bt }) => {
                 </Typography>
             </div>
             <div className={classes.demo}>
-                <List dense={dense}>
+                <List dense={false}>
                     {productCategories.filter(productCategory => productCategory.sectors[0]
                         && productCategory.sectors.some(sector => sector.name === item.name && productCategory.parent.length === 0 )
                         && productCategory.business_types.some(businesstype => businesstype.name === bt.name)).slice(0, endIndex).map((scFiltered) => {

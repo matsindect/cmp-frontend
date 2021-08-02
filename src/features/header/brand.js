@@ -1,7 +1,6 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
-import Image from "react-bootstrap/Image";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Button } from "@material-ui/core";
 import { Row, Col } from "react-bootstrap";

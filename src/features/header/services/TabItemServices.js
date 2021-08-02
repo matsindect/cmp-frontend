@@ -19,12 +19,11 @@ const useStyles = makeStyles((theme) => ({
 
 const TabItemServices = ({ item, bt }) => {
     const classes = useStyles();
-    const [dense, setDense] = useState(false);
     const [endIndex, setEndIndex] = useState(3)
 
     const { serviceCategories, isLoading, error } = useSelector(state => state.serviceCategories);
 
-    if (isLoading) return <h3></h3>;
+    if (isLoading) return;
     if (error) return <h3>{error}</h3>;
 
 
@@ -36,7 +35,7 @@ const TabItemServices = ({ item, bt }) => {
                 </Typography>
             </div>
             <div className={classes.demo}>
-                <List dense={dense}>
+                <List dense={false}>
                     {serviceCategories.filter(serviceCategory => serviceCategory.sectors[0]
                         && serviceCategory.sectors.some(sector => sector.name === item.name && serviceCategory.parent.length === 0 )
                         && serviceCategory.business_types.some(businesstype => businesstype.name === bt.name)).slice(0, endIndex).map((scFiltered) => {

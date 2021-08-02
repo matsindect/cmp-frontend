@@ -46,7 +46,7 @@ export default function SimpleContainer({ business, sectors }) {
 
   useEffect(() => {
     setEndNumberOfPages(Math.ceil(sectors.length / 9))
-  }, [page, value, numberOfPages])
+  }, [page, value, numberOfPages, sectors])
 
   return (
     <CSSTransition
